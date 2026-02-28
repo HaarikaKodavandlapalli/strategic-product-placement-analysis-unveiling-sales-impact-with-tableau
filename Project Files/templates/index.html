@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analysis Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📊</span>
+                    <h1>Strategic Product Placement Analysis</h1>
+                    <p>Sales Impact Visualization Dashboard</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-button active" data-tab="summary">Summary</button>
+            <button class="tab-button" data-tab="placement">Placement</button>
+            <button class="tab-button" data-tab="category">Category</button>
+            <button class="tab-button" data-tab="region">Region</button>
+            <button class="tab-button" data-tab="data">Data</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Tab -->
+            <section id="summary-tab" class="tab-content active">
+                <h2 class="section-title">Dashboard Summary</h2>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>TOTAL TRANSACTIONS</h3>
+                        <p class="metric-value" id="total-transactions">20</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>TOTAL REVENUE</h3>
+                        <p class="metric-value" id="total-revenue">$32,676</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>AVG UNITS SOLD</h3>
+                        <p class="metric-value" id="avg-units">47.55</p>
+                    </div>
+                    <div class="metric-card">
+                        <h3>CATEGORIES</h3>
+                        <p class="metric-value" id="total-categories">2</p>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>Sales by Placement Location</h3>
+                    <canvas id="placementChart" style="max-height: 400px;"></canvas>
+                </div>
+            </section>
+
+            <!-- Placement Tab -->
+            <section id="placement-tab" class="tab-content">
+                <h2 class="section-title">Sales by Placement Location</h2>
+                <div class="chart-section">
+                    <canvas id="placementDetailChart" style="max-height: 400px;"></canvas>
+                </div>
+            </section>
+
+            <!-- Category Tab -->
+            <section id="category-tab" class="tab-content">
+                <h2 class="section-title">Sales by Product Category</h2>
+                <div class="chart-section">
+                    <canvas id="categoryChart" style="max-height: 400px;"></canvas>
+                </div>
+            </section>
+
+            <!-- Region Tab -->
+            <section id="region-tab" class="tab-content">
+                <h2 class="section-title">Sales by Region</h2>
+                <div class="chart-section">
+                    <canvas id="regionChart" style="max-height: 400px;"></canvas>
+                </div>
+            </section>
+
+            <!-- Data Tab -->
+            <section id="data-tab" class="tab-content">
+                <h2 class="section-title">Raw Data</h2>
+                <button class="load-btn" id="loadDataBtn">Load Data</button>
+                <div class="table-container">
+                    <table id="dataTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Placement</th>
+                                <th>Region</th>
+                                <th>Revenue</th>
+                                <th>Units</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Strategic Product Placement Analysis | SmartInternz Program</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

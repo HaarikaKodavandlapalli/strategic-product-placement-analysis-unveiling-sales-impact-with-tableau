@@ -1,0 +1,48 @@
+{
+  "total_revenue": 32676.0,
+  "total_transactions": 20,
+  "avg_units_sold": 47.55,
+  "categories_count": 2,
+  "revenue_by_region": {
+    "EAST": 7690.0,
+    "NORTH": 7631.0,
+    "SOUTH": 8215.0,
+    "WEST": 9140.0
+  },
+  "revenue_by_placement": {
+    "Display": 9570.0,
+    "EndCap": 10930.5,
+    "Shelf": 12175.5
+  },
+  "revenue_by_category": {
+    "Appliances": 11370.0,
+    "Electronics": 21306.0
+  },
+  "top_products": [
+    {
+      "ProductName": "Blender Pro",
+      "Revenue": 2400.0
+    },
+    {
+      "ProductName": "Premium Coffee Maker",
+      "Revenue": 2250.5
+    },
+    {
+      "ProductName": "Food Processor",
+      "Revenue": 2100.0
+    },
+    {
+      "ProductName": "Kettle Smart",
+      "Revenue": 2100.0
+    },
+    {
+      "ProductName": "Juicer Pro",
+      "Revenue": 2050.0
+    }
+  ],
+  "placement_effectiveness": {
+    "Display": 0.026610612592230232,
+    "EndCap": 0.030237335763651514,
+    "Shelf": 0.03325776729536124
+  }
+}
